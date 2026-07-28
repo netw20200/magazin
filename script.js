@@ -120,3 +120,68 @@ function closeSideMenu() {
     sideMenu.classList.remove("active");
     overlay.classList.remove("active");
 }
+// ===== Слайдер =====
+
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+
+let currentSlide = 0;
+let sliderTimer;
+
+function showSlide(index){
+
+    slides.forEach((slide,i)=>{
+
+        slide.classList.toggle("active",i===index);
+        dots[i].classList.toggle("active",i===index);
+
+    });
+
+    currentSlide=index;
+}
+
+function nextSlide(){
+
+    let next=currentSlide+1;
+
+    if(next>=slides.length){
+        next=0;
+    }
+
+    showSlide(next);
+}
+
+function startSlider(){
+
+    sliderTimer=setInterval(nextSlide,3500);
+
+}
+
+function stopSlider(){
+
+    clearInterval(sliderTimer);
+
+}
+
+dots.forEach((dot,index)=>{
+
+    dot.addEventListener("click",()=>{
+
+        stopSlider();
+
+        showSlide(index);
+
+        startSlider();
+
+    });
+
+});
+
+const slider=document.querySelector(".hero-slider");
+
+slider.addEventListener("touchstart",stopSlider);
+slider.addEventListener("touchend",startSlider);
+
+startSlider();
+
+
