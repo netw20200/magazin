@@ -376,14 +376,14 @@ body {
 
 .mySwiper{
     width:100%;
-    height:180px;
-    border-radius:22px;
+    height:110px;
+    border-radius:18px;
     overflow:hidden;
 }
 
 .swiper-slide{
     width:100%;
-    height:180px;
+    height:110px;
 }
 
 .swiper-slide img{
