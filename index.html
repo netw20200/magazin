@@ -4,137 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог товаров</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-    body { background: #f5f5f7; color: #1d1d1f; padding: 16px; padding-bottom: 40px; }
-    h1 { font-size: 24px; font-weight: 700; margin-bottom: 16px; text-align: center; }
-    .search-box { position: sticky; top: 0; background: #f5f5f7; padding: 12px 0; z-index: 10; margin-bottom: 16px; }
-    .search-box input { width: 100%; padding: 14px 16px; font-size: 16px; border: none; border-radius: 12px; background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.06); outline: none; }
-    .products { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; }
-    .card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
-    .card img { width: 100%; height: 160px; object-fit: cover; background: #eee; }
-    .card-body { padding: 12px; flex-grow: 1; display: flex; flex-direction: column; }
-    .card-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .card-price { font-size: 17px; font-weight: 700; color: #0071e3; margin-bottom: 12px; }
-    .btn { display: block; width: 100%; padding: 10px; background: #0071e3; color: white; text-align: center; text-decoration: none; border-radius: 10px; font-size: 14px; font-weight: 600; margin-top: auto; }
-    .loading, .empty, .error { text-align: center; padding: 40px 20px; color: #86868b; font-size: 16px; }
-    .error { background: #ffebee; color: #c62828; border-radius: 12px; }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Каталог</h1>
+
   <div class="search-box">
     <input type="text" id="search" placeholder="Поиск по названию..." autocomplete="off">
   </div>
+
   <div id="products" class="products">
     <div class="loading">Загрузка товаров...</div>
   </div>
 
-  <script>
-    // Используем прокси, чтобы обойти блокировку
-    const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1r-wBtHVkH87xpKx70ajoNAHXQu2a7xP6ovtJU3sUM3o/export?format=csv&gid=0';
-    const SHEET_CSV = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(SHEET_URL);
-    const TELEGRAM_USER = 'volkdoma';
-
-    let allProducts = [];
-
-    async function loadProducts() {
-      try {
-        const response = await fetch(SHEET_CSV);
-        if (!response.ok) throw new Error('Ошибка загрузки');
-        const text = await response.text();
-        
-        if (!text.includes('Name,Category,Price')) {
-          throw new Error('Получены не те данные');
-        }
-
-        const rows = parseCSV(text);
-        allProducts = rows.slice(1)
-          .map(row => ({
-            name: (row[0] || '').trim(),
-            price: (row[2] || '').trim(),
-            thumbnail: (row[9] || '').trim(),
-            description: (row[4] || '').trim()
-          }))
-          .filter(p => p.name.length > 1 && !p.name.includes('function') && !p.name.includes('object'));
-
-        renderProducts(allProducts);
-      } catch (err) {
-        document.getElementById('products').innerHTML = 
-          `<div class="error">Не удалось загрузить товары.<br>Попробуй обновить страницу позже.</div>`;
-        console.error(err);
-      }
-    }
-
-    function parseCSV(text) {
-      const rows = [];
-      let current = '';
-      let inQuotes = false;
-      let row = [];
-
-      for (let i = 0; i < text.length; i++) {
-        const char = text[i];
-        const next = text[i+1];
-
-        if (char === '"' && inQuotes && next === '"') {
-          current += '"';
-          i++;
-        } else if (char === '"') {
-          inQuotes = !inQuotes;
-        } else if (char === ',' && !inQuotes) {
-          row.push(current);
-          current = '';
-        } else if ((char === '\n' || char === '\r') && !inQuotes) {
-          if (current || row.length > 0) {
-            row.push(current);
-            rows.push(row);
-            row = [];
-            current = '';
-          }
-        } else {
-          current += char;
-        }
-      }
-      if (current || row.length > 0) {
-        row.push(current);
-        rows.push(row);
-      }
-      return rows;
-    }
-
-    function renderProducts(products) {
-      const container = document.getElementById('products');
-      if (products.length === 0) {
-        container.innerHTML = '<div class="empty">Ничего не найдено</div>';
-        return;
-      }
-
-      container.innerHTML = products.map(p => {
-        const price = p.price ? p.price + ' ₴' : '';
-        const img = p.thumbnail || 'https://via.placeholder.com/300x300?text=Нет+фото';
-        const message = encodeURIComponent(`Здравствуйте! Хочу заказать:\n\n${p.name}\nЦена: ${p.price} ₴`);
-        const tgLink = `https://t.me/\( {TELEGRAM_USER}?text= \){message}`;
-
-        return `
-          <div class="card">
-            <img src="\( {img}" alt=" \){p.name}" loading="lazy" onerror="this.src='https://via.placeholder.com/300x300?text=Нет+фото'">
-            <div class="card-body">
-              <div class="card-title">${p.name}</div>
-              <div class="card-price">${price}</div>
-              <a href="${tgLink}" class="btn" target="_blank">Заказать</a>
-            </div>
-          </div>
-        `;
-      }).join('');
-    }
-
-    document.getElementById('search').addEventListener('input', function(e) {
-      const query = e.target.value.toLowerCase().trim();
-      const filtered = allProducts.filter(p => p.name.toLowerCase().includes(query));
-      renderProducts(filtered);
-    });
-
-    loadProducts();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
