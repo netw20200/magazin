@@ -99,3 +99,24 @@ document.getElementById('search').addEventListener('input', function(e) {
 
 // Запуск
 loadProducts();
+
+
+// ===== Меню =====
+
+const menuBtn = document.querySelector(".menu-btn");
+const sideMenu = document.querySelector(".side-menu");
+const closeMenu = document.querySelector(".close-menu");
+const overlay = document.querySelector(".overlay");
+
+menuBtn.addEventListener("click", () => {
+    sideMenu.classList.add("active");
+    overlay.classList.add("active");
+});
+
+closeMenu.addEventListener("click", closeSideMenu);
+overlay.addEventListener("click", closeSideMenu);
+
+function closeSideMenu() {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
+}
