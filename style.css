@@ -329,11 +329,15 @@ body {
 
 .side-menu a{
 
+    display:flex;
+    align-items:center;
+    gap:16px;
+
     padding:18px 22px;
 
-    text-decoration:none;
-
     color:#222;
+
+    text-decoration:none;
 
     font-size:18px;
 
@@ -342,6 +346,9 @@ body {
     transition:.2s;
 }
 
-.side-menu a:hover{
-    background:#f6f6f6;
+.side-menu a span:first-child{
+
+    font-size:24px;
+
+    color:#79B64A;
 }
