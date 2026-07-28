@@ -3,20 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог товаров</title>
+  <title>magazin</title>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Каталог</h1>
 
-  <div class="search-box">
-    <input type="text" id="search" placeholder="Поиск по названию..." autocomplete="off">
+<header class="top-header">
+
+  <button class="menu-btn">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <div class="logo">
+    <i class="fa-solid fa-bag-shopping"></i>
+    <span>magazin</span>
   </div>
 
-  <div id="products" class="products">
-    <div class="loading">Загрузка товаров...</div>
+  <div class="header-right">
+
+    <button class="icon-btn">
+      <i class="fa-regular fa-user"></i>
+    </button>
+
+    <button class="cart-btn">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span id="cart-count">0</span>
+    </button>
+
   </div>
 
-  <script src="script.js"></script>
+</header>
+
+<div class="search-box">
+  <input type="text"
+         id="search"
+         placeholder="Поиск товаров..."
+         autocomplete="off">
+</div>
+
+<div id="products" class="products">
+  <div class="loading">Загрузка товаров...</div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
