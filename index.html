@@ -1,61 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>magazin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>magazin</title>
 
-  <link rel="stylesheet"
-href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="top-header">
-<header class="top-header">
 
-<button class="menu-btn">
-<span class="material-symbols-outlined">menu</span>
-</button>
+    <button class="menu-btn" aria-label="Меню">
+        <span class="material-symbols-outlined">menu</span>
+    </button>
 
-<div class="logo">
-<span class="material-symbols-outlined logo-icon">
-shopping_bag
-</span>
+    <div class="logo">
 
-<span>magazin</span>
-</div>
+        <span class="material-symbols-outlined logo-icon">
+            shopping_bag
+        </span>
 
-<div class="header-right">
+        <span class="logo-text">
+            magazin
+        </span>
 
-<button class="icon-btn">
-<span class="material-symbols-outlined">person</span>
-</button>
+    </div>
 
-<button class="cart-btn">
+    <div class="header-right">
 
-<span class="material-symbols-outlined">
-shopping_bag
-</span>
+        <button class="icon-btn" aria-label="Профиль">
+            <span class="material-symbols-outlined">
+                person
+            </span>
+        </button>
 
-<span id="cart-count">0</span>
+        <button class="cart-btn" aria-label="Корзина">
 
-</button>
+            <span class="material-symbols-outlined">
+                shopping_bag
+            </span>
 
-</div>
+            <span id="cart-count">0</span>
+
+        </button>
+
+    </div>
 
 </header>
-<div class="search-box">
-  <input type="text"
-         id="search"
-         placeholder="Поиск товаров..."
-         autocomplete="off">
-</div>
+
+<section class="search-wrapper">
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Поиск товаров..."
+            autocomplete="off">
+
+    </div>
+
+</section>
+
+<main>
 
 <div id="products" class="products">
-  <div class="loading">Загрузка товаров...</div>
+
+    <div class="loading">
+
+        Загрузка товаров...
+
+    </div>
+
 </div>
+
+</main>
 
 <script src="script.js"></script>
 
