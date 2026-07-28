@@ -67,12 +67,9 @@ body {
 }
 
 .logo-icon{
-
-    font-size:30px !important;
-
-    color:#48a84d;
+    font-size:34px !important;
+    color:#79B64A;
 }
-
 .header-right{
 
     display:flex;
