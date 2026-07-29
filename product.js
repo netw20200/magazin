@@ -20,7 +20,7 @@ name:(row[1]||"").trim(),
 
 price:(row[3]||"").trim(),
 
-img:(row[10]||"").trim(),
+img:"images/" + (row[10]||"").trim(),
 
 description:(row[5]||"").trim()
 
