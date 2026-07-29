@@ -152,7 +152,7 @@ new Swiper(".mySwiper", {
 });
 // ===== КОРЗИНА =====
 
-function addToCart(name,price,img){
+function addToCart(id,name,price,img){
 
     const index = cart.findIndex(item=>item.name===name);
 
