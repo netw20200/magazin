@@ -18,9 +18,11 @@ id:(row[0]||"").trim(),
 
 name:(row[1]||"").trim(),
 
-price:(row[2]||"").trim(),
+price:(row[3]||"").trim(),
 
-img:"images/"+(row[9]||"").trim()
+img:"images/"+(row[10]||"").trim(),
+
+description:(row[5]||"").trim()
 
 }));
 
