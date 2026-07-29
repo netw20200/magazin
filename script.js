@@ -164,7 +164,9 @@ function addToCart(id,name,price,img){
 
         cart.push({
 
-            name:name,
+    id:id,
+
+    name:name,
             price:Number(price.replace(",",".")),
             img:img,
             qty:1
