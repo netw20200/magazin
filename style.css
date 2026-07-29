@@ -171,31 +171,45 @@ body {
   margin-bottom: 12px;
 }
 
-.btn {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background: #0071e3;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: auto;
+/* ===== КНОПКА ===== */
+
+.btn{
+
+    display:block;
+
+    width:100%;
+
+    padding:10px;
+
+    background:#0071e3;
+
+    color:#fff;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    margin-top:auto;
+
+    cursor:pointer;
+
+    transition:.2s;
 }
 
-.loading, .empty, .error {
-  text-align: center;
-  padding: 40px 20px;
-  color: #86868b;
-  font-size: 16px;
-}
+.btn:hover{
 
-.error {
-  background: #ffebee;
-  color: #c62828;
-  border-radius: 12px;
+    background:#005ec0;
+
 }
 
 /* ===== HEADER ===== */
