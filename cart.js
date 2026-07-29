@@ -117,4 +117,14 @@ function changeQty(id, change){
     renderCart();
 
 }
+// ===== УДАЛЕНИЕ ТОВАРА =====
 
+function removeItem(id){
+
+    cart = cart.filter(item => item.id != id);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    renderCart();
+
+}
