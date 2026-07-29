@@ -43,6 +43,34 @@ function sendOrder(){
 
     const comment = document.getElementById("customer-comment").value.trim();
 
+    // ===== ПРОВЕРКА ПОЛЕЙ =====
+
+const address = document.getElementById("customer-address").value.trim();
+
+if(name===""){
+
+    alert("Введите имя");
+
+    return;
+
+}
+
+if(phone===""){
+
+    alert("Введите телефон");
+
+    return;
+
+}
+
+if(address===""){
+
+    alert("Введите адрес доставки");
+
+    return;
+
+}
+    
     let text = "🛒 Новый заказ\n\n";
 
     text += "👤 Имя: " + name + "\n";
