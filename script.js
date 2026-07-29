@@ -192,3 +192,17 @@ function updateCartCounter(){
 }
 
 updateCartCounter();
+
+// ===== ПЕРЕХОД В КОРЗИНУ =====
+
+const openCart = document.getElementById("open-cart");
+
+if(openCart){
+
+    openCart.addEventListener("click", () => {
+
+        window.location.href = "cart.html";
+
+    });
+
+}
