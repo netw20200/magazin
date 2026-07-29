@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Оформление заказа</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ===== ОФОРМЛЕНИЕ ЗАКАЗА ===== -->
+
+<div class="checkout">
+
+<h2>Оформление заказа</h2>
+
+<input
+type="text"
+id="customer-name"
+placeholder="Ваше имя">
+
+<input
+type="tel"
+id="customer-phone"
+placeholder="Телефон">
+
+<textarea
+id="customer-comment"
+placeholder="Комментарий к заказу"></textarea>
+
+<button
+class="checkout-btn"
+onclick="sendOrder()">
+
+Отправить заказ
+
+</button>
+
+<button
+class="cancel-btn"
+onclick="history.back()">
+
+Назад
+
+</button>
+
+</div>
+
+<script src="checkout.js"></script>
+
+</body>
+
+</html>
