@@ -144,3 +144,51 @@ new Swiper(".mySwiper", {
         clickable: true
     }
 });
+// ===== КОРЗИНА =====
+
+function addToCart(name,price,img){
+
+    const index = cart.findIndex(item=>item.name===name);
+
+    if(index>-1){
+
+        cart[index].qty++;
+
+    }else{
+
+        cart.push({
+
+            name:name,
+            price:Number(price.replace(",",".")),
+            img:img,
+            qty:1
+
+        });
+
+    }
+
+    localStorage.setItem("cart",JSON.stringify(cart));
+
+    updateCartCounter();
+
+    alert("Товар добавлен в корзину");
+
+}
+
+// ===== СЧЕТЧИК =====
+
+function updateCartCounter(){
+
+    const count = cart.reduce((sum,item)=>sum+item.qty,0);
+
+    const cartCount=document.getElementById("cart-count");
+
+    if(cartCount){
+
+        cartCount.textContent=count;
+
+    }
+
+}
+
+updateCartCounter();
