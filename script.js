@@ -75,8 +75,7 @@ function renderProducts(products) {
     const price = p.price ? p.price + ' ₴' : '';
     const img = p.thumbnail || 'https://via.placeholder.com/300x300?text=Нет+фото';
     const message = encodeURIComponent(`Здравствуйте! Хочу заказать:\n\n${p.name}\nЦена: ${p.price} ₴`);
-    const tgLink = `https://t.me/\( {TELEGRAM_USER}?text= \){message}`;
-
+    const tgLink = `https://t.me/${TELEGRAM_USER}?text=${message}`;
     return `
       <div class="card">
         <img src="${img}"
