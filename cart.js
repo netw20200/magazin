@@ -128,22 +128,24 @@ function removeItem(id){
     renderCart();
 
 }
-<!-- ===== ОФОРМЛЕНИЕ ЗАКАЗА ===== -->
+// ===== ОФОРМЛЕНИЕ ЗАКАЗА =====
 
-<div class="cart-actions">
+function checkout(){
 
-    <button class="checkout-btn"
-        onclick="checkout()">
+    window.location.href = "checkout.html";
 
-        Оформить заказ
+}
 
-    </button>
+// ===== ОТМЕНА ЗАКАЗА =====
 
-    <button class="cancel-btn"
-        onclick="cancelOrder()">
+function cancelOrder(){
 
-        Отменить заказ
+    if(!confirm("Очистить корзину?")) return;
 
-    </button>
+    localStorage.removeItem("cart");
 
-</div>
+    cart=[];
+
+    window.location.href="index.html";
+
+}
