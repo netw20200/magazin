@@ -38,8 +38,6 @@ return;
 
 document.getElementById("product-page").innerHTML=`
 
-<p>URL: ${JSON.stringify(product.img)}</p>
-
 <img src="${product.img}" style="width:300px">
 
 <h1>${product.name}</h1>
