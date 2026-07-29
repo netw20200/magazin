@@ -86,7 +86,13 @@ function renderProducts(products) {
     const message = encodeURIComponent(`Здравствуйте! Хочу заказать:\n\n${p.name}\nЦена: ${p.price} ₴`);
     const tgLink = `https://t.me/${TELEGRAM_USER}?text=${message}`;
     return `
-      <div class="card">
+
+      <!-- ===== ПЕРЕХОД НА СТРАНИЦУ ТОВАРА ===== -->
+
+<div class="card"
+
+onclick="openProduct('${p.id}')">
+
         <img src="${img}" alt="${p.name}" loading="lazy"
 onerror="this.src='https://via.placeholder.com/300x300?text=Нет+фото'">
            <div class="card-body">
@@ -214,3 +220,10 @@ if(openCart){
     });
 
 }
+// ===== ОТКРЫТЬ ТОВАР =====
+
+function openProduct(id){
+
+    window.location.href = "product.html?id=" + id;
+
+          }
