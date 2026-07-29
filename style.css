@@ -643,3 +643,33 @@ body {
 
     color:#222;
 }
+/* ===== КНОПКА УДАЛЕНИЯ ===== */
+
+.delete-btn{
+
+    margin-left:auto;
+
+    width:36px;
+
+    height:36px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#e53935;
+
+    color:#fff;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.delete-btn:hover{
+
+    background:#c62828;
+
+}
