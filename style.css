@@ -481,3 +481,41 @@ body {
     color:#2f9d58;
 }
 
+/* ===== КОРЗИНА ===== */
+
+.cart-items{
+    padding:20px;
+    min-height:350px;
+}
+
+.cart-total{
+    background:#fff;
+    border-top:1px solid #e5e5e5;
+    padding:20px;
+    text-align:center;
+}
+
+.cart-total h2{
+    font-size:22px;
+    color:#222;
+}
+
+.cart-buttons{
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.cart-buttons .btn{
+    width:100%;
+}
+
+.cancel-btn{
+    background:#f1f1f1;
+    color:#333;
+}
+
+.cancel-btn:hover{
+    background:#e3e3e3;
+}
