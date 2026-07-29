@@ -93,7 +93,7 @@ onerror="this.src='https://via.placeholder.com/300x300?text=Нет+фото'">
           <div class="card-title">${p.name}</div>
           <div class="card-price">${price}</div>
           <button class="btn"
-onclick="addToCart('${p.id}','${p.name}','${p.price}','${img}')"
+onclick="addToCart('${p.id}','${p.name}','${p.price}','${img}')">
 В корзину
 </button>
         </div>
