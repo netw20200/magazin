@@ -13,12 +13,18 @@ async function loadProducts() {
     const rows = parseCSV(text);
 
     allProducts = rows.slice(1)
-      .map(row => ({
-        name: (row[0] || '').trim(),
-        price: (row[2] || '').trim(),
-        thumbnail: (row[9] || '').trim()
-      }))
-      .filter(p => p.name.length > 1);
+.map((row,index)=>({
+
+    id:index,
+
+    name:(row[0] || '').trim(),
+
+    price:(row[2] || '').trim(),
+
+    thumbnail:(row[9] || '').trim()
+
+}))
+.filter(p=>p.name.length>1);
 
     renderProducts(allProducts);
   } catch (err) {
