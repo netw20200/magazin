@@ -38,7 +38,9 @@ return;
 
 document.getElementById("product-page").innerHTML=`
 
-<img src="${product.img}" class="product-image">
+<p>${product.img}</p>
+
+<img src="${product.img}" style="width:300px">
 
 <h1>${product.name}</h1>
 
