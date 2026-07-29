@@ -77,6 +77,8 @@ if(address===""){
 
     text += "📞 Телефон: " + phone + "\n\n";
 
+    text += "📍 Адрес: " + address + "\n\n";
+    
     text += "Товары:\n";
 
     let total = 0;
