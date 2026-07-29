@@ -78,7 +78,8 @@ function renderProducts(products) {
     const tgLink = `https://t.me/${TELEGRAM_USER}?text=${message}`;
     return `
       <div class="card">
-        <img src="${img}"
+        <img src="${img}" alt="${p.name}" loading="lazy"
+onerror="this.src='https://via.placeholder.com/300x300?text=Нет+фото'">
            <div class="card-body">
           <div class="card-title">${p.name}</div>
           <div class="card-price">${price}</div>
