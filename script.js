@@ -154,7 +154,7 @@ new Swiper(".mySwiper", {
 
 function addToCart(id,name,price,img){
 
-    const index = cart.findIndex(item=>item.name===name);
+    const index = cart.findIndex(item=>item.id==id);
 
     if(index>-1){
 
