@@ -128,3 +128,22 @@ function removeItem(id){
     renderCart();
 
 }
+<!-- ===== ОФОРМЛЕНИЕ ЗАКАЗА ===== -->
+
+<div class="cart-actions">
+
+    <button class="checkout-btn"
+        onclick="checkout()">
+
+        Оформить заказ
+
+    </button>
+
+    <button class="cancel-btn"
+        onclick="cancelOrder()">
+
+        Отменить заказ
+
+    </button>
+
+</div>
