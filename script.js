@@ -13,15 +13,15 @@ async function loadProducts() {
     const rows = parseCSV(text);
 
     allProducts = rows.slice(1)
-.map((row,index)=>({
+.map(row=>({
 
-    id:index,
+    id:(row[0] || '').trim(),
 
-    name:(row[0] || '').trim(),
+    name:(row[1] || '').trim(),
 
-    price:(row[2] || '').trim(),
+    price:(row[3] || '').trim(),
 
-    thumbnail:(row[9] || '').trim()
+    thumbnail:(row[10] || '').trim()
 
 }))
 .filter(p=>p.name.length>1);
