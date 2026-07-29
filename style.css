@@ -730,3 +730,71 @@ body {
     cursor:pointer;
 
 }
+/* ===== ОФОРМЛЕНИЕ ЗАКАЗА ===== */
+
+.checkout{
+
+    max-width:600px;
+
+    margin:30px auto;
+
+    padding:20px;
+
+}
+
+.checkout h2{
+
+    margin-bottom:20px;
+
+}
+
+.checkout input,
+.checkout textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    box-sizing:border-box;
+
+}
+
+.checkout textarea{
+
+    min-height:100px;
+
+    resize:vertical;
+
+}
+
+.checkout-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #eee;
+
+}
+
+#checkout-total{
+
+    margin:20px 0;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#2f9d58;
+
+}
