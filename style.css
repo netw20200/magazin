@@ -4,7 +4,7 @@
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-
+ 
 body {
   margin: 0;
   background: #f5f5f7;
@@ -397,37 +397,85 @@ body {
 .footer{
     margin-top:40px;
     background:#fff;
-    border-top:1px solid #e5e5e5;
-    padding:25px 20px;
+    border-top:1px solid #e8e8e8;
+    padding:30px 20px;
 }
 
-.footer-links{
+.footer-logo{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    font-size:24px;
+    font-weight:700;
+
+    margin-bottom:28px;
+}
+
+.footer-logo i{
+    color:#2f9d58;
+    font-size:28px;
+}
+
+.footer-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-    margin-bottom:20px;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
 }
 
-.footer-links a{
+.footer h3{
+    font-size:17px;
+    margin-bottom:12px;
+}
+
+.footer a{
     display:flex;
     align-items:center;
     gap:10px;
+
     text-decoration:none;
-    color:#333;
-    font-size:16px;
-    font-weight:500;
-    transition:.2s;
+
+    color:#444;
+
+    margin-bottom:12px;
+
+    font-size:15px;
 }
 
-.footer-links a:hover{
+.footer a i{
     color:#2f9d58;
-}
-
-.footer-links i{
-    font-size:20px;
-    color:#2f9d58;
-    width:24px;
+    width:22px;
     text-align:center;
+}
+
+.footer-social{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+
+    margin:30px 0 20px;
+}
+
+.footer-social a{
+    width:46px;
+    height:46px;
+
+    border-radius:50%;
+
+    background:#f4f4f4;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:22px;
+
+    margin:0;
+}
+
+.footer-social a i{
+    color:#2f9d58;
 }
 
 .footer-copy{
@@ -435,5 +483,17 @@ body {
     color:#888;
     font-size:14px;
     border-top:1px solid #eee;
-    padding-top:15px;
+    padding-top:18px;
 }
+.footer-dev{
+    text-align:center;
+    margin-top:8px;
+    color:#999;
+    font-size:13px;
+}
+
+.footer-dev strong{
+    color:#2f9d58;
+    font-weight:700;
+}
+
