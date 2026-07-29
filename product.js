@@ -38,7 +38,7 @@ return;
 
 document.getElementById("product-page").innerHTML=`
 
-<p>${product.img}</p>
+<p>URL: ${JSON.stringify(product.img)}</p>
 
 <img src="${product.img}" style="width:300px">
 
