@@ -44,15 +44,24 @@ function renderCart(){
 
     <p>${item.price} ₴</p>
 
-    <div class="qty-box">
+<!-- ===== УПРАВЛЕНИЕ ТОВАРОМ ===== -->
 
-        <button onclick="changeQty(${item.id},-1)">−</button>
+<div class="qty-box">
 
-        <span>${item.qty}</span>
+    <button onclick="changeQty(${item.id},-1)">−</button>
 
-        <button onclick="changeQty(${item.id},1)">+</button>
+    <span>${item.qty}</span>
 
-    </div>
+    <button onclick="changeQty(${item.id},1)">+</button>
+
+    <button class="delete-btn"
+        onclick="removeItem(${item.id})">
+
+        🗑️
+
+    </button>
+
+</div>
 
 </div>
 
