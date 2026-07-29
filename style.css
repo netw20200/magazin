@@ -673,3 +673,60 @@ body {
     background:#c62828;
 
 }
+/* ===== КНОПКИ ОФОРМЛЕНИЯ ===== */
+
+.cart-actions{
+
+    margin-top:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.checkout-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#0071e3;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+.cancel-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#f2f2f2;
+
+    color:#333;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
