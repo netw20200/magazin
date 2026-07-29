@@ -87,3 +87,25 @@ document.getElementById("checkout-btn").addEventListener("click",()=>{
     alert("Страница оформления заказа будет следующим этапом.");
 
 });
+// ===== КОЛИЧЕСТВО ТОВАРА =====
+
+function changeQty(id, change){
+
+    const index = cart.findIndex(item => item.id == id);
+
+    if(index === -1) return;
+
+    cart[index].qty += change;
+
+    if(cart[index].qty <= 0){
+
+        cart.splice(index,1);
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    renderCart();
+
+}
+
