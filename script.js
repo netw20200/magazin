@@ -1,4 +1,7 @@
 const TELEGRAM_USER = 'volkdoma';
+// ===== КОРЗИНА =====
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 let allProducts = [];
 
 async function loadProducts() {
