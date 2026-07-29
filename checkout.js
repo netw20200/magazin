@@ -1,7 +1,30 @@
 // ===== ОТПРАВКА ЗАКАЗА =====
 
 const TELEGRAM_USER = "volkdoma";
+// ===== ВЫВОД ТОВАРОВ =====
 
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let total = 0;
+
+document.getElementById("checkout-cart").innerHTML = cart.map(item=>{
+
+    total += item.price * item.qty;
+
+    return `
+        <div class="checkout-item">
+
+            <span>${item.name}</span>
+
+            <span>${item.qty} × ${item.price} ₴</span>
+
+        </div>
+    `;
+
+}).join("");
+
+document.getElementById("checkout-total").innerHTML =
+`<h3>Итого: ${total} ₴</h3>`;
 function sendOrder(){
 
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
