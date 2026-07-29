@@ -393,107 +393,91 @@ body {
     border-radius:18px;
 }
 /* ===== FOOTER ===== */
+/* ===== FOOTER ===== */
 
 .footer{
     margin-top:40px;
     background:#fff;
-    border-top:1px solid #e8e8e8;
+    border-top:1px solid #ececec;
     padding:30px 20px;
-}
-
-.footer-logo{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-
-    font-size:24px;
-    font-weight:700;
-
-    margin-bottom:28px;
-}
-
-.footer-logo i{
-    color:#2f9d58;
-    font-size:28px;
 }
 
 .footer-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:25px;
+    gap:30px;
+    margin-bottom:25px;
 }
 
 .footer h3{
-    font-size:17px;
-    margin-bottom:12px;
+    font-size:18px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:15px;
 }
 
 .footer a{
     display:flex;
     align-items:center;
-    gap:10px;
+    gap:12px;
 
     text-decoration:none;
 
     color:#444;
 
-    margin-bottom:12px;
+    font-size:16px;
 
-    font-size:15px;
+    margin-bottom:14px;
+
+    transition:.2s;
+}
+
+.footer a:hover{
+    color:#2f9d58;
 }
 
 .footer a i{
     color:#2f9d58;
-    width:22px;
+    font-size:20px;
+    width:24px;
     text-align:center;
 }
 
 .footer-social{
     display:flex;
     justify-content:center;
-    gap:18px;
-
+    gap:28px;
     margin:30px 0 20px;
 }
 
 .footer-social a{
-    width:46px;
-    height:46px;
-
-    border-radius:50%;
-
-    background:#f4f4f4;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:22px;
-
-    margin:0;
+    color:#2f9d58;
+    font-size:30px;
+    text-decoration:none;
+    transition:.2s;
 }
 
-.footer-social a i{
-    color:#2f9d58;
+.footer-social a:hover{
+    transform:scale(1.1);
 }
 
 .footer-copy{
+    border-top:1px solid #ececec;
+    margin-top:20px;
+    padding-top:18px;
     text-align:center;
     color:#888;
     font-size:14px;
-    border-top:1px solid #eee;
-    padding-top:18px;
 }
+
 .footer-dev{
-    text-align:center;
     margin-top:8px;
+    text-align:center;
     color:#999;
     font-size:13px;
 }
 
 .footer-dev strong{
     color:#2f9d58;
-    font-weight:700;
 }
 
