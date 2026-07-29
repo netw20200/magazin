@@ -21,7 +21,7 @@ async function loadProducts() {
 
     price:(row[3] || '').trim(),
 
-    thumbnail:(row[10] || '').trim()
+    thumbnail:"images/" + (row[10] || '').trim()
 
 }))
 .filter(p=>p.name.length>1);
