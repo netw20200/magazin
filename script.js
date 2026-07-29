@@ -122,18 +122,19 @@ function closeSideMenu() {
 }
     // ===== Swiper =====
 
-new Swiper(".mySwiper",{
+new Swiper(".mySwiper", {
+    slidesPerView: 2.3,
+    spaceBetween: 12,
 
-    loop:true,
+    loop: true,
 
-    autoplay:{
-        delay:3500,
-        disableOnInteraction:false
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
     },
 
-    pagination:{
-        el:".swiper-pagination",
-        clickable:true
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true
     }
-
 });
