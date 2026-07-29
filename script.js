@@ -86,7 +86,10 @@ onerror="this.src='https://via.placeholder.com/300x300?text=Нет+фото'">
            <div class="card-body">
           <div class="card-title">${p.name}</div>
           <div class="card-price">${price}</div>
-          <a href="${tgLink}" class="btn" target="_blank">Заказать</a>
+          <button class="btn"
+onclick="addToCart('${p.name}','${p.price}','${img}')">
+В корзину
+</button>
         </div>
       </div>
     `;
