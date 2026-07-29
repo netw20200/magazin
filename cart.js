@@ -36,13 +36,25 @@ function renderCart(){
 
             <img src="${item.img}">
 
-            <div class="cart-info">
+            <!-- ===== КОЛИЧЕСТВО ТОВАРА ===== -->
 
-                <h3>${item.name}</h3>
+<div class="cart-info">
 
-                <p>${item.price} ₴ × ${item.qty}</p>
+    <h3>${item.name}</h3>
 
-            </div>
+    <p>${item.price} ₴</p>
+
+    <div class="qty-box">
+
+        <button onclick="changeQty(${item.id},-1)">−</button>
+
+        <span>${item.qty}</span>
+
+        <button onclick="changeQty(${item.id},1)">+</button>
+
+    </div>
+
+</div>
 
         </div>
 
