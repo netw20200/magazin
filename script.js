@@ -230,35 +230,5 @@ function openProduct(id){
 // ===== ОФОРМЛЕНИЕ ЗАКАЗА =====
 
 function checkout(){
-
-    const name = document.getElementById("customer-name").value;
-    const phone = document.getElementById("customer-phone").value;
-    const city = document.getElementById("customer-city").value;
-    const branch = document.getElementById("customer-branch").value;
-    const payment = document.getElementById("payment-method").value;
-
-    let message =
-`🛒 Новый заказ
-
-Имя: ${name}
-Телефон: ${phone}
-Город: ${city}
-Отделение: ${branch}
-Оплата: ${payment}
-
-Товары:
-`;
-
-    let total = 0;
-
-    cart.forEach(item=>{
-        message += `• ${item.name} ×${item.qty} — ${item.price * item.qty} ₴\n`;
-        total += item.price * item.qty;
-    });
-
-    message += `\n Итого: ${total} ₴`;
-
-    const url = `https://t.me/${TELEGRAM_USER}?text=${encodeURIComponent(message)}`;
-window.open(url, "_blank");
-
+    window.location.href = "checkout.html";
 }
