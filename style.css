@@ -504,7 +504,6 @@ body {
 .cart-buttons .btn{
     flex: 1;
     height: 40px;
-    background: rgba(34, 228, 50, 0.33);
     border: none;
     border-radius: 10px;
     color: #222;
