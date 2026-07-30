@@ -501,7 +501,7 @@ body {
     margin-top: 20px;
 }
 
-.cart-buttons .btn{
+.cart-action .btn{
     flex: 1;
     height: 40px;
     border: none;
@@ -514,7 +514,7 @@ body {
     transition: 0.25s;
 }
 
-.cart-buttons .btn:hover{
+.cart-action .btn:hover{
     background: rgba(34, 228, 50, 0.5);
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.25);
