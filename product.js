@@ -133,3 +133,18 @@ document.getElementById("open-cart").onclick = function () {
     window.location.href = "cart.html";
 };
 
+// Кнопка меню на странице товара
+document.querySelector(".menu-btn").onclick = function () {
+    document.querySelector(".side-menu").classList.add("active");
+    document.querySelector(".overlay").classList.add("active");
+};
+
+document.querySelector(".close-menu").onclick = function () {
+    document.querySelector(".side-menu").classList.remove("active");
+    document.querySelector(".overlay").classList.remove("active");
+};
+
+document.querySelector(".overlay").onclick = function () {
+    document.querySelector(".side-menu").classList.remove("active");
+    document.querySelector(".overlay").classList.remove("active");
+};
