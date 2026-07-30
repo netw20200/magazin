@@ -126,3 +126,14 @@ return rows;
 document.getElementById("open-cart").onclick = function () {
     window.location.href = "cart.html";
 };
+
+// Обновить счетчик корзины
+const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+const count = cart.reduce((sum, item) => sum + item.qty, 0);
+
+const cartCount = document.getElementById("cart-count");
+
+if (cartCount) {
+    cartCount.textContent = count;
+}
