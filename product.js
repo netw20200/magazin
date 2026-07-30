@@ -122,3 +122,7 @@ rows.push(row);
 return rows;
 
 }
+// Кнопка корзины на странице товара
+document.getElementById("open-cart").onclick = function () {
+    window.location.href = "cart.html";
+};
