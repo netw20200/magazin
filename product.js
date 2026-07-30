@@ -48,7 +48,7 @@ document.getElementById("product-page").innerHTML=`
 ${product.description}
 </p>
 
-<button class="btn"
+<button class="btn product-btn"
 onclick="addToCart('${product.id}','${product.name}','${product.price}','${product.img}')">
 В корзину
 </button>
