@@ -227,3 +227,10 @@ function openProduct(id){
     window.location.href = "product.html?id=" + id;
 
           }
+// ===== ОФОРМЛЕНИЕ ЗАКАЗА =====
+
+function checkout(){
+
+    alert("Следующим шагом подключим отправку заказа в Telegram.");
+
+}
