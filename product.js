@@ -3,7 +3,10 @@
 const params = new URLSearchParams(window.location.search);
 
 const productId = params.get("id");
-
+// Обновить счетчик корзины
+if (typeof updateCartCounter === "function") {
+    updateCartCounter();
+}
 fetch("products.csv")
 
 .then(r=>r.text())
