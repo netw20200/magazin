@@ -514,6 +514,9 @@ body {
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.18);
     transition: 0.25s;
+  display: inline-flex;
+align-items: center;
+justify-content: center;
 }
 
 .cart-actions .btn:hover{
