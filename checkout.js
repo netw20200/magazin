@@ -104,3 +104,26 @@ if(address===""){
     window.open(url,"_blank");
 
 }
+// ===== СПОСІБ ДОСТАВКИ =====
+
+const deliveryOptions = document.querySelectorAll('input[name="delivery"]');
+
+const novaFields = document.getElementById("nova-fields");
+
+deliveryOptions.forEach(option => {
+
+    option.addEventListener("change", function(){
+
+        if(this.value === "nova"){
+
+            novaFields.style.display = "block";
+
+        }else{
+
+            novaFields.style.display = "none";
+
+        }
+
+    });
+
+});
