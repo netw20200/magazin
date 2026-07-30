@@ -520,6 +520,27 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(0,0,0,0.25);
   }
+.checkout-btn{
+    background: rgba(34, 228, 50, 0.33);
+    color:#222;
+}
+
+.checkout-btn:hover{
+    background: rgba(34, 228, 50, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.cancel-btn{
+    background:#d9d9d9;
+    color:#222;
+}
+
+.cancel-btn:hover{
+    background:#c7c7c7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
 /* ===== КАРТОЧКА ТОВАРА В КОРЗИНЕ ===== */
 
 .cart-card{
