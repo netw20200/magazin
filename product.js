@@ -38,11 +38,20 @@ return;
 
 document.getElementById("product-page").innerHTML=`
 
-<img src="${product.img}" style="width:300px">
+<img src="${product.img}" class="product-image">
 
 <h1>${product.name}</h1>
 
 <h2>${product.price} ₴</h2>
+
+<p class="product-description">
+${product.description}
+</p>
+
+<button class="btn"
+onclick="addToCart('${product.id}','${product.name}','${product.price}','${product.img}')">
+В корзину
+</button>
 
 `;
 
