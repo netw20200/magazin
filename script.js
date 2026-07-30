@@ -231,6 +231,16 @@ function openProduct(id){
 
 function checkout(){
 
-    alert("Следующим шагом подключим отправку заказа в Telegram.");
+    const name = document.getElementById("customer-name").value;
+    const phone = document.getElementById("customer-phone").value;
+    const city = document.getElementById("customer-city").value;
+    const branch = document.getElementById("customer-branch").value;
+    const payment = document.getElementById("payment-method").value;
+
+    console.log(name);
+    console.log(phone);
+    console.log(city);
+    console.log(branch);
+    console.log(payment);
 
 }
