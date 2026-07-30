@@ -209,17 +209,17 @@ updateCartCounter();
 
 // ===== ПЕРЕХОД В КОРЗИНУ =====
 
-const openCart = document.getElementById("open-cart");
+document.addEventListener("click", function(e){
 
-if(openCart){
+    const btn = e.target.closest("#open-cart");
 
-    openCart.addEventListener("click", () => {
+    if(btn){
 
         window.location.href = "cart.html";
 
-    });
+    }
 
-}
+});
 // ===== ОТКРЫТЬ ТОВАР =====
 
 function openProduct(id){
