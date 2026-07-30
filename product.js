@@ -51,6 +51,50 @@ document.getElementById("product-page").innerHTML=`
 ${product.description}
 </p>
 
+<div class="delivery-info">
+
+<h3>
+<span class="material-symbols-outlined">local_shipping</span>
+Доставка
+</h3>
+
+<p>
+<span class="material-symbols-outlined">inventory_2</span>
+Нова Пошта — відділення або поштомат
+</p>
+
+<p>
+<span class="material-symbols-outlined">local_shipping</span>
+Кур'єрська доставка Новою Поштою
+</p>
+
+<p>
+<span class="material-symbols-outlined">schedule</span>
+Відправка протягом 1 робочого дня
+</p>
+
+<h3>
+<span class="material-symbols-outlined">payments</span>
+Оплата
+</h3>
+
+<p>
+<span class="material-symbols-outlined">payments</span>
+Післяплата (накладений платіж)
+</p>
+
+<p>
+<span class="material-symbols-outlined">credit_card</span>
+Оплата на картку
+</p>
+
+<p>
+<span class="material-symbols-outlined">account_balance</span>
+Оплата за IBAN
+</p>
+
+</div>
+
 <button class="btn product-btn"
 onclick="addToCart('${product.id}','${product.name}','${product.price}','${product.img}')">
 В корзину
