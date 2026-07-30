@@ -237,10 +237,27 @@ function checkout(){
     const branch = document.getElementById("customer-branch").value;
     const payment = document.getElementById("payment-method").value;
 
-    console.log(name);
-    console.log(phone);
-    console.log(city);
-    console.log(branch);
-    console.log(payment);
+    let message =
+`🛒 Новый заказ
+
+Имя: ${name}
+Телефон: ${phone}
+Город: ${city}
+Отделение: ${branch}
+Оплата: ${payment}
+
+Товары:
+`;
+
+    let total = 0;
+
+    cart.forEach(item=>{
+        message += `• ${item.name} ×${item.qty} — ${item.price * item.qty} ₴\n`;
+        total += item.price * item.qty;
+    });
+
+    message += `\n💰 Итого: ${total} ₴`;
+
+    console.log(message);
 
 }
