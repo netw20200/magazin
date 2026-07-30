@@ -256,8 +256,9 @@ function checkout(){
         total += item.price * item.qty;
     });
 
-    message += `\n💰 Итого: ${total} ₴`;
+    message += `\n Итого: ${total} ₴`;
 
-    console.log(message);
+    const url = `https://t.me/${TELEGRAM_USER}?text=${encodeURIComponent(message)}`;
+window.open(url, "_blank");
 
 }
