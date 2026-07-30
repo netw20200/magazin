@@ -883,3 +883,15 @@ margin:20px 0;
     color:#222;
     font-size:18px;
 }
+.delivery-option{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:12px 0;
+    font-size:18px;
+    cursor:pointer;
+}
+
+.delivery-option input{
+    margin:0;
+}
