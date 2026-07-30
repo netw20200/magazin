@@ -676,15 +676,10 @@ body {
 /* ===== КНОПКИ ОФОРМЛЕНИЯ ===== */
 
 .cart-actions{
-
-    margin-top:20px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:14px;
-
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .checkout-btn{
