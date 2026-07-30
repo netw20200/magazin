@@ -30,16 +30,46 @@ placeholder="Ваше имя">
 type="tel"
 id="customer-phone"
 placeholder="Телефон">
+<h3>Спосіб отримання</h3>
 
-<textarea
-id="customer-comment"
-placeholder="Комментарий к заказу"></textarea>
-<!-- ===== АДРЕС ДОСТАВКИ ===== -->
+<label class="delivery-option">
+<input type="radio"
+name="delivery"
+value="pickup"
+checked>
+
+Самовивіз
+
+</label>
+
+<label class="delivery-option">
+
+<input type="radio"
+name="delivery"
+value="nova">
+
+Нова Пошта
+
+</label>
+
+<div id="nova-fields" style="display:none;">
 
 <input
 type="text"
-id="customer-address"
-placeholder="Адрес доставки">
+id="customer-city"
+placeholder="Місто">
+
+<input
+type="text"
+id="customer-branch"
+placeholder="Відділення або поштомат">
+
+</div>
+  
+<textarea
+id="customer-comment"
+placeholder="Комментарий к заказу"></textarea>
+
 
 <!-- ===== ТОВАРЫ В ЗАКАЗЕ ===== -->
 
