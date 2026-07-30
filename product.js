@@ -124,6 +124,9 @@ return rows;
 }
 // Кнопка корзины на странице товара
 document.getElementById("open-cart").onclick = function () {
+    if (typeof updateCartCounter === "function") {
+    updateCartCounter();
+    }
     window.location.href = "cart.html";
 };
 
