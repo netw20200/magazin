@@ -24,7 +24,7 @@ document.getElementById("checkout-cart").innerHTML = cart.map(item=>{
 }).join("");
 
 document.getElementById("checkout-total").innerHTML =
-`<h3>Итого: ${total} ₴</h3>`;
+`<h3>Сума: ${total} ₴</h3>`;
 function sendOrder(){
 
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -116,7 +116,7 @@ if(delivery==="nova"){
 
     });
 
-    text += "\n💰 Итого: " + total + " ₴\n";
+    text += "\n Сума: " + total + " ₴\n";
 
     if(comment){
 
