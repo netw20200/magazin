@@ -232,3 +232,28 @@ function openProduct(id){
 function checkout(){
     window.location.href = "checkout.html";
 }
+// ===== СОРТУВАННЯ =====
+
+const sortBtn = document.getElementById("sort-btn");
+const sortMenu = document.getElementById("sort-menu");
+
+if(sortBtn && sortMenu){
+
+    sortBtn.onclick = function(e){
+
+        e.stopPropagation();
+
+        sortMenu.style.display =
+            sortMenu.style.display==="block"
+            ? "none"
+            : "block";
+
+    };
+
+    document.onclick = function(){
+
+        sortMenu.style.display = "none";
+
+    };
+
+}
