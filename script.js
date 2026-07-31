@@ -257,3 +257,50 @@ if(sortBtn && sortMenu){
     };
 
 }
+document.querySelectorAll("#sort-menu div").forEach(item=>{
+
+    item.onclick=function(){
+
+        sortMenu.style.display="none";
+
+        const type=this.dataset.sort;
+
+        if(type==="default"){
+
+            products.sort((a,b)=>a.id-b.id);
+
+        }
+
+        if(type==="name"){
+
+            products.sort((a,b)=>
+                a.name.localeCompare(b.name,"uk")
+            );
+
+        }
+
+        if(type==="price-asc"){
+
+            products.sort((a,b)=>a.price-b.price);
+
+        }
+
+        if(type==="price-desc"){
+
+            products.sort((a,b)=>b.price-a.price);
+
+        }
+
+        if(type==="category"){
+
+            products.sort((a,b)=>
+                a.category.localeCompare(b.category,"uk")
+            );
+
+        }
+
+        renderProducts(products);
+
+    };
+
+});
