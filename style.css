@@ -503,7 +503,7 @@ body {
 
 .cart-actions .btn{
   white-space: nowrap;
-    width: 140px;
+    width: 80%;
     height: 40px;
     background: rgba(34, 228, 50, 0.33);
     border: none;
