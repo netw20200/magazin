@@ -15,7 +15,7 @@ function renderCart(){
 
         container.innerHTML=`
         <p style="text-align:center;padding:40px;">
-        Корзина пуста
+        Кошик порожній
         </p>
         `;
 
