@@ -21,7 +21,7 @@ id:(row[0]||"").trim(),
 
 name:(row[1]||"").trim(),
 
-price:(row[3]||"").trim(),
+price:Number((row[3]||"0").replace(",", ".")),
 
 img:"images/" + (row[10]||"").trim(),
 
