@@ -258,6 +258,7 @@ if(sortBtn && sortMenu){
 
 }
 document.querySelectorAll("#sort-menu div").forEach(item=>{
+document.querySelectorAll("#sort-menu div").forEach(item=>{
 
     item.onclick=function(){
 
@@ -267,13 +268,13 @@ document.querySelectorAll("#sort-menu div").forEach(item=>{
 
         if(type==="default"){
 
-            products.sort((a,b)=>a.id-b.id);
+            allProducts.sort((a,b)=>Number(a.id)-Number(b.id));
 
         }
 
         if(type==="name"){
 
-            products.sort((a,b)=>
+            allProducts.sort((a,b)=>
                 a.name.localeCompare(b.name,"uk")
             );
 
@@ -281,25 +282,25 @@ document.querySelectorAll("#sort-menu div").forEach(item=>{
 
         if(type==="price-asc"){
 
-            products.sort((a,b)=>a.price-b.price);
+            allProducts.sort((a,b)=>Number(a.price)-Number(b.price));
 
         }
 
         if(type==="price-desc"){
 
-            products.sort((a,b)=>b.price-a.price);
+            allProducts.sort((a,b)=>Number(b.price)-Number(a.price));
 
         }
 
         if(type==="category"){
 
-            products.sort((a,b)=>
-                a.category.localeCompare(b.category,"uk")
+            allProducts.sort((a,b)=>
+                (a.category || "").localeCompare(b.category || "","uk")
             );
 
         }
 
-        renderProducts(products);
+        renderProducts(allProducts);
 
     };
 
