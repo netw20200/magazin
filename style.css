@@ -895,3 +895,43 @@ margin:20px 0;
 .delivery-option input{
     margin:0;
 }
+/* ===== ВЫБОР СПОСОБА ДОСТАВКИ ===== */
+
+.delivery-select{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin:15px 0;
+}
+
+.delivery-card{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px;
+
+    border:2px solid #ddd;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-size:18px;
+
+    font-weight:600;
+}
+
+.delivery-card .material-symbols-outlined{
+    font-size:28px;
+    color:#22e432;
+}
+
+.delivery-card.active{
+    border-color:#22e432;
+    background:rgba(34,228,50,.15);
+}
