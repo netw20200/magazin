@@ -19,6 +19,8 @@ async function loadProducts() {
 
     name:(row[1] || '').trim(),
 
+    category:(row[2] || '').trim(),
+
     price:Number((row[3] || "0").replace(",",".").trim()),
 
     thumbnail:"images/" + (row[10] || '').trim()
