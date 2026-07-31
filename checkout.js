@@ -45,8 +45,6 @@ function sendOrder(){
 
     // ===== ПРОВЕРКА ПОЛЕЙ =====
 
-const address = document.getElementById("customer-address").value.trim();
-
 if(name===""){
 
     alert("Введите имя");
@@ -63,22 +61,49 @@ if(phone===""){
 
 }
 
-if(address===""){
+const delivery = document.querySelector('input[name="delivery"]:checked').value;
 
-    alert("Введите адрес доставки");
+let addressText = "";
 
-    return;
+if(delivery==="nova"){
+
+    const city = document.getElementById("customer-city").value.trim();
+
+    const branch = document.getElementById("customer-branch").value.trim();
+
+    if(city===""){
+
+        alert("Введите город");
+
+        return;
+
+    }
+
+    if(branch===""){
+
+        alert("Введите отделение");
+
+        return;
+
+    }
+
+    addressText =
+        "Новая Почта\n" +
+        "Город: " + city + "\n" +
+        "Отделение: " + branch;
+
+}else{
+
+    addressText = "🚶 Самовывоз";
 
 }
     
-    let text = "🛒 Новый заказ\n\n";
+    let text = " Новый заказ\n\n";
 
-    text += "👤 Имя: " + name + "\n";
+    text += " Имя: " + name + "\n";
 
-    text += "📞 Телефон: " + phone + "\n\n";
-
-    text += "📍 Адрес: " + address + "\n\n";
-    
+    text += "Телефон: " + phone + "\n\n";
+    text += addressText + "\n\n";
     text += "Товары:\n";
 
     let total = 0;
