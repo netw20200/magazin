@@ -106,24 +106,32 @@ if(address===""){
 }
 // ===== СПОСІБ ДОСТАВКИ =====
 
-const deliveryOptions = document.querySelectorAll('input[name="delivery"]');
+const pickupCard = document.getElementById("pickup-card");
+const novaCard = document.getElementById("nova-card");
+
+const pickupRadio = pickupCard.querySelector("input");
+const novaRadio = novaCard.querySelector("input");
 
 const novaFields = document.getElementById("nova-fields");
 
-deliveryOptions.forEach(option => {
+pickupCard.onclick = function(){
 
-    option.addEventListener("change", function(){
+    pickupRadio.checked = true;
 
-        if(this.value === "nova"){
+    pickupCard.classList.add("active");
+    novaCard.classList.remove("active");
 
-            novaFields.style.display = "block";
+    novaFields.style.display = "none";
 
-        }else{
+};
 
-            novaFields.style.display = "none";
+novaCard.onclick = function(){
 
-        }
+    novaRadio.checked = true;
 
-    });
+    novaCard.classList.add("active");
+    pickupCard.classList.remove("active");
 
-});
+    novaFields.style.display = "block";
+
+};
