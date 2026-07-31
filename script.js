@@ -175,7 +175,7 @@ function addToCart(id,name,price,img){
     id:id,
 
     name:name,
-            price:Number(price.replace(",",".")),
+          price:Number(price),
             img:img,
             qty:1
 
