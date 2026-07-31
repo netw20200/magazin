@@ -257,7 +257,7 @@ if(sortBtn && sortMenu){
     };
 
 }
-document.querySelectorAll("#sort-menu div").forEach(item=>{
+
 document.querySelectorAll("#sort-menu div").forEach(item=>{
 
     item.onclick=function(){
