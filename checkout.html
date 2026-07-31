@@ -32,25 +32,38 @@ id="customer-phone"
 placeholder="Телефон">
 <h3>Спосіб отримання</h3>
 
-<label class="delivery-option">
-<input type="radio"
+<div class="delivery-select">
+
+<div class="delivery-card active" id="pickup-card">
+
+<span class="material-symbols-outlined">storefront</span>
+
+<span>Самовивіз</span>
+
+<input
+type="radio"
 name="delivery"
 value="pickup"
-checked>
+checked
+hidden>
 
-Самовивіз
+</div>
 
-</label>
+<div class="delivery-card" id="nova-card">
 
-<label class="delivery-option">
+<span class="material-symbols-outlined">local_shipping</span>
 
-<input type="radio"
+<span>Нова Пошта</span>
+
+<input
+type="radio"
 name="delivery"
-value="nova">
+value="nova"
+hidden>
 
-Нова Пошта
+</div>
 
-</label>
+</div>
 
 <div id="nova-fields" style="display:none;">
 
