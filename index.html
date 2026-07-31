@@ -32,7 +32,7 @@
 
     <div class="header-right">
 
-        <button class="icon-btn" aria-label="Профиль">
+        <button class="icon-btn" aria-label="Профіль">
             <span class="material-symbols-outlined">
                 person
             </span>
@@ -68,16 +68,16 @@
 
 <a href="index.html">
     <span class="material-symbols-outlined">home</span>
-    <span>Главная</span></a>
+    <span>Головна</span></a>
 <a href="index.html#products">
     <span class="material-symbols-outlined">storefront</span>
     <span>Каталог</span></a>
 <a href="#">
     <span class="material-symbols-outlined">local_offer</span>
-    <span>Акции</span></a>
+    <span>Акції</span></a>
 <a href="#">
     <span class="material-symbols-outlined">call</span>
-    <span>Контакты</span></a>
+    <span>Контакти</span></a>
 <a href="#">
     <span class="material-symbols-outlined">photo_camera</span>
     <span>Instagram</span></a>
@@ -91,7 +91,7 @@
         <input
             type="text"
             id="search"
-            placeholder="Поиск товаров..."
+            placeholder="Пошук товарів..."
             autocomplete="off">
 
     </div>
@@ -144,12 +144,36 @@
 
     
 <main>
+<div class="sort-bar">
 
+    <button id="sort-btn" class="sort-btn">
+
+        <span class="material-symbols-outlined">sort</span>
+
+        Сортування
+
+    </button>
+
+    <div id="sort-menu" class="sort-menu">
+
+        <div data-sort="default">За замовчуванням</div>
+
+        <div data-sort="name">За назвою (А–Я)</div>
+
+        <div data-sort="price-asc">Ціна: від дешевих до дорогих</div>
+
+        <div data-sort="price-desc">Ціна: від дорогих до дешевих</div>
+
+        <div data-sort="category">За категорією</div>
+
+    </div>
+
+</div>
 <div id="products" class="products">
 
     <div class="loading">
 
-        Загрузка товаров...
+        Загрузка товарiв...
 
     </div>
 
@@ -161,7 +185,7 @@
     <div class="footer-grid">
 
         <div>
-            <h3>Контакты</h3>
+            <h3>Контакти</h3>
 
             <a href="tel:+380000000000">
                 <i class="fa-solid fa-phone"></i>
@@ -176,7 +200,7 @@
         </div>
 
         <div>
-            <h3>Покупателям</h3>
+            <h3>Покупцям</h3>
 
             <a href="#">
                 <i class="fa-solid fa-truck-fast"></i>
@@ -209,10 +233,10 @@
     </div>
 
     <div class="footer-copy">
-        © 2026 magazin. Все права защищены.
+        © 2026 magazin. Всі права захищені.
     </div>
     <div class="footer-dev">
-    Разработано <strong>Network</strong>
+    Разроблено <strong>Network</strong>
     </div>
 
 </footer>
