@@ -307,3 +307,30 @@ document.querySelectorAll("#sort-menu div").forEach(item=>{
     };
 
 });
+const toTop = document.getElementById("toTop");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+
+        toTop.classList.add("show");
+
+    }else{
+
+        toTop.classList.remove("show");
+
+    }
+
+});
+
+toTop.onclick = () => {
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+};
