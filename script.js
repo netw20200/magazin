@@ -1,4 +1,4 @@
-const TELEGRAM_USER = 'volkdoma';
+const TELEGRAM_USER = 'flora_shop';
 // ===== КОРЗИНА =====
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
