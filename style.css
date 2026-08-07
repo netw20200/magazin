@@ -1212,5 +1212,12 @@ margin:20px 0;
     .work-hours div{
         font-size:14px;
     }
+a.icon-btn {
+  color: inherit;
+  text-decoration: none;
+}
 
+a.icon-btn .material-symbols-outlined {
+  color: inherit;
+}
                                }
