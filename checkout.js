@@ -1,6 +1,6 @@
 // ===== ОТПРАВКА ЗАКАЗА =====
 
-const TELEGRAM_USER = "volkdoma";
+const TELEGRAM_USER = "flora_shop";
 // ===== ВЫВОД ТОВАРОВ =====
 
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
